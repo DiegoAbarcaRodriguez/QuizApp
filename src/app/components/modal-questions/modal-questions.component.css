@@ -1,0 +1,40 @@
+
+.pop-up{
+    width: auto;
+    height: 525px;
+    
+    padding-bottom: 600px;
+
+    @media (min-width: 500px) {
+        width: 464px;
+    }
+}
+
+.padding-extra{
+    padding-bottom: 650px;
+}
+
+
+.icono{
+    position: absolute;
+    right: 0;
+    top: -70px;
+}
+
+button{
+    color: rgba(96, 102, 208, 0.7);
+    border-color: rgba(96, 102, 208, 0.7);
+    font-weight: bold;
+
+}
+
+button:hover{
+    color: white;
+}
+
+img{
+    height: auto;
+    width: 50px;
+    
+    
+}

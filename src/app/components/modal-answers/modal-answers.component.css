@@ -1,0 +1,23 @@
+.results-title {
+    color: rgba(29, 53, 93, 1)
+}
+
+p {
+    color: rgba(29, 53, 93, 1)
+}
+
+span {
+    color: rgba(111, 207, 151, 1);
+}
+
+button{
+ 
+    border-radius: 10px;
+    border:1px rgba(29, 53, 93, 1) solid;
+}
+
+button:hover{
+    background-color: rgba(29, 53, 93, 1);
+    transition: background-color 0.5s ease-out;
+    color: white;
+}

@@ -1,0 +1,32 @@
+<div [attr.data-id]="questionIndex" class="bg-white pop-up pt-3  px-2 rounded-5 position-relative d-none"
+    [ngClass]="{'padding-extra':question!.img}">
+
+    <div *ngIf="index<4;else anwersModal">
+
+        <icono class="icono" />
+
+        <div class="d-flex flex-column justify-content-around">
+
+            <span class="mt-5 mx-4 fw-bold fs-4 text-secondary d-flex flex-column"><img class="mb-2"
+                    *ngIf="question!.img" [src]="question!.img">
+                {{question!.title}} </span>
+
+            <button *ngFor="let option of question!.options" (click)="chooseAnswer(option.value)" #button
+                class="btn btn-outline-warning mb-4 mt-4 mx-4 py-3 rounded-4 d-flex" [attr.data-value]="option.value">
+                <span class="ms-2 me-5">{{option.letter}}</span> {{option.value | uppercase}} </button>
+
+        </div>
+
+        <div class="d-flex justify-content-end me-4">
+            <button class="btn btn-outline-warning px-4 py-2 rounded-2" (click)="nextPage()"  [disabled]="disableButtonNext">next</button>
+        </div>
+
+    </div>
+
+    <ng-template #anwersModal>
+        <modal-answers #anwersModal />
+    </ng-template>
+
+
+
+</div>
